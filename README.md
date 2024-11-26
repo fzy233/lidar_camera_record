@@ -88,18 +88,19 @@ catkin_make
 
 - Edit ```lidar_config``` in ```./src/livox_ros_driver/config/livox_lidar_config.json``` to
 
+Example:
+Change the broadcast_code to your AVIA PIN, and add a "1" at the rear
+Example: PIN: 123456, "broadcast_code": "1234561"
+
 ```json
 "lidar_config": [
         {
-            // Change it to your AVIA PIN, and add a "1" at the rear
-            // Example: PIN: 123456, "broadcast_code": "1234561"
+            
             "broadcast_code": "3JEDM2U00169251",
-            // Enable it
             "enable_connect": true,
             "return_mode": 0,
             "coordinate": 0,
-            // Turn on IMU
-            "imu_rate": kImuFreq200Hz,
+            "imu_rate": "kImuFreq200Hz",
             "extrinsic_parameter_source": 0,
             "enable_high_sensitivity": false
         },
@@ -123,7 +124,6 @@ Edit parameters in ```./src/mvs_ros_pkg/config/left_camera_trigger.yaml``` to wh
 - Edit ip config in ```src/livox_ros_driver2/config/HAP_config.json```
 
 ```json
-//example
 "HAP": {
     "host_net_info" : {
       "cmd_data_ip" : "192.168.8.1",
@@ -134,7 +134,7 @@ Edit parameters in ```./src/mvs_ros_pkg/config/left_camera_trigger.yaml``` to wh
 
 "lidar_configs" : [
     {
-      "ip" : "192.168.8.2", // It should be set as the IP of HAP lidar
+      "ip" : "192.168.8.2",
     }
   ]
 
