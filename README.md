@@ -16,7 +16,9 @@ Follow **1.Preparation** part in [livox_ros_driver2/README.md](./src/livox_ros_d
 
 ### 2.2. Eigen
 
-Follow [Eigen Installation](http://ceres-solver.org/installation.html)
+```shell
+sudo apt install libeigen3-dev
+```
 
 ### 2.3. Ceres Solver
 
@@ -48,6 +50,17 @@ rm -f ./lib/64/libusb-1.0.so.0
 # test the software again
 
 bash ./bin/MVS.sh
+```
+
+### 2.6 Livos-SDK
+
+```shell
+cd ~
+git clone https://github.com/Livox-SDK/Livox-SDK.git
+cd Livox-SDK
+cd build && cmake ..
+make
+sudo make install
 ```
 
 ## 3. Build
