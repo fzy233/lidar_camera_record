@@ -273,7 +273,7 @@ int main(int argc, char **argv) {
   pub = it.advertise(pub_topic, 1);
   
   const char *user_name = getlogin();
-  std::string path_for_time_stamp = "/home/" + std::string(user_name) + "/timeshare";
+  std::string path_for_time_stamp = "/root/timeshare";
   const char *shared_file_name = path_for_time_stamp.c_str();
 
   int fd = open(shared_file_name, O_RDWR);
