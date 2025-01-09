@@ -95,7 +95,8 @@ int main(int argc, char **argv) {
   livox_node.getParam("enable_lidar_bag", lidar_bag);
   livox_node.getParam("enable_imu_bag", imu_bag);
   const char *user_name = getlogin();
-  std::string path_for_time_stamp = "/home/" + std::string(user_name) + "/timeshare";
+  // std::string path_for_time_stamp = "/home/" + std::string(user_name) + "/timeshare";
+  std::string path_for_time_stamp = "/root/timeshare";
   const char *shared_file_name = path_for_time_stamp.c_str();
   int fd = open(shared_file_name, O_CREAT | O_RDWR | O_TRUNC, 0666);
   if (fd == -1) {
